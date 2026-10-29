@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UMER GRAPHICS | Premium Creative Portfolio</title>
+<meta name="description" content="Umer Qureshi — Graphic Designer, Brand Designer and E-commerce Creative.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --gold:#e9bd61;
+  --gold2:#fff0be;
+  --bg:#080908;
+  --card:#10120f;
+  --text:#f7f5ef;
+  --muted:#a8aaa3;
+  --border:rgba(233,189,97,.24);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{
+  font-family:Inter,Arial,sans-serif;background:var(--bg);
+  color:var(--text);line-height:1.7;overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;
+  background:
+    radial-gradient(ellipse at 10% 10%,#d5a4440d,transparent 35%),
+    radial-gradient(ellipse at 90% 65%,#d5a4440a,transparent 35%);
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1140px,90%);margin:auto}
+section{padding:90px 0}
+.gold{color:var(--gold)}
+.tag{
+  font-size:11px;text-transform:uppercase;letter-spacing:4px;
+  color:var(--gold);font-weight:700;
+}
+.heading{
+  font:700 clamp(32px,4vw,48px) "Playfair Display",serif;
+  line-height:1.2;margin:12px 0 18px;
+}
+.description{color:var(--muted);font-size:14px;max-width:580px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:9px;padding:13px 23px;border-radius:50px;
+  font-size:12px;font-weight:700;border:1px solid var(--gold);
+  cursor:pointer;transition:.3s;
+}
+.btn-primary{
+  color:#17130a;background:linear-gradient(110deg,#f7df9b,#d6a23c);
+  box-shadow:0 0 25px #e9bd611a;
+}
+.btn-outline{color:var(--text);background:#ffffff03}
+.btn:hover{transform:translateY(-4px);box-shadow:0 0 30px #e9bd6130}
+
+/* NAVIGATION */
+header{
+  position:fixed;top:0;width:100%;z-index:100;
+  background:#090a09d9;backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border);
+}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px}
+.logo-icon{
+  width:43px;height:43px;display:grid;place-items:center;
+  border:1px solid var(--gold);border-radius:12px;
+  color:var(--gold);font-size:23px;font-weight:800;
+  box-shadow:inset 0 0 15px #e9bd6114;
+}
+.logo small{display:block;font-size:9px;color:var(--muted);font-weight:400}
+.navlinks{display:flex;align-items:center;gap:25px}
+.navlinks a{font-size:12px;color:#ccc;transition:.3s}
+.navlinks a:hover{color:var(--gold)}
+.menu{
+  display:none;background:none;color:var(--gold);
+  border:1px solid var(--border);border-radius:8px;
+  padding:7px 12px;font-size:21px;
+}
+
+/* HERO */
+.hero{
+  min-height:730px;padding:145px 0 80px;
+  display:flex;align-items:center;position:relative;isolation:isolate;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  gap:55px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(44px,6vw,76px);line-height:1.12;
+  letter-spacing:-2.8px;margin:22px 0;
+}
+.hero h1 em{
+  font-family:"Playfair Display",serif;
+  font-weight:700;background:linear-gradient(110deg,#fff2c7,#e9bd61,#ad7725);
+  background-size:200%;color:transparent;
+  -webkit-background-clip:text;background-clip:text;
+  animation:shine 6s linear infinite;
+}
+@keyframes shine{to{background-position:200% center}}
+.hero p{color:#b8bab2;font-size:15px;max-width:500px;margin-bottom:27px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:32px;flex-wrap:wrap;margin-top:35px}
+.stats strong{display:block;font-size:21px;color:var(--gold)}
+.stats span{display:block;font-size:10px;color:var(--muted)}
+.hero-visual{position:relative;min-height:425px;display:grid;place-items:center}
+.visual{
+  width:100%;height:390px;border:1px solid #e9bd6170;
+  border-radius:18px;overflow:hidden;position:relative;
+  background:
+  linear-gradient(180deg,#00000005,#050605df),
+  url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85") center/cover;
+  box-shadow:0 25px 90px #0009,0 0 40px #e9bd6109;
+  animation:float 6s ease-in-out infinite;
+}
+.visual:before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(115deg,transparent 35%,#e9bd611c 50%,transparent 65%);
+  transform:translateX(-100%);animation:sweep 7s infinite;
+}
+@keyframes sweep{55%,100%{transform:translateX(100%)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.visual-content{position:absolute;left:28px;bottom:25px}
+.visual-content small{color:var(--gold);letter-spacing:4px;font-size:10px}
+.visual-content h2{font:700 33px "Playfair Display",serif}
+.orbit{
+  position:absolute;right:-4px;top:5px;width:85px;height:85px;
+  display:grid;place-items:center;border-radius:50%;
+  border:1px solid var(--gold);background:#10110de8;
+  color:var(--gold);font-size:29px;
+  animation:rotate 15s linear infinite;
+}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.float-card{
+  position:absolute;left:-24px;top:65%;background:#12130ff2;
+  border:1px solid var(--border);border-radius:10px;
+  padding:15px 20px;box-shadow:0 15px 40px #0009;
+}
+.float-card span{font-size:10px;color:var(--gold);letter-spacing:2px}
+.float-card strong{display:block;font-size:14px}
+
+/* SECTION HEADINGS */
+.section-top{
+  display:flex;justify-content:space-between;align-items:end;
+  gap:25px;margin-bottom:35px;
+}
+.section-top .description{max-width:350px}
+
+/* SERVICES */
+.services{background:#0d0f0d;border-block:1px solid #ffffff0d}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.service{
+  padding:27px 24px;background:linear-gradient(140deg,#151711,#0e100e);
+  border:1px solid #ffffff12;border-radius:13px;transition:.35s;
+  position:relative;overflow:hidden;
+}
+.service:after{
+  content:"";position:absolute;width:100px;height:100px;
+  right:-60px;bottom:-60px;border-radius:50%;
+  background:#e9bd6110;transition:.35s;
+}
+.service:hover{transform:translateY(-7px);border-color:var(--gold)}
+.service:hover:after{width:180px;height:180px}
+.icon{font-size:29px;color:var(--gold);margin-bottom:16px}
+.service h3{font-size:16px;margin-bottom:9px}
+.service p{font-size:12px;color:var(--muted)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+.brand-art{
+  min-height:350px;border:1px solid var(--border);border-radius:15px;
+  display:grid;place-items:center;text-align:center;padding:25px;
+  background:radial-gradient(ellipse at center,#3a2a10,#11120f 65%);
+  position:relative;overflow:hidden;
+}
+.brand-art:before,.brand-art:after{
+  content:"";position:absolute;width:200px;height:200px;
+  border:1px solid #e9bd6135;transform:rotate(45deg);
+}
+.brand-art:after{width:260px;height:260px}
+.monogram{font-size:100px;font-weight:800;color:var(--gold);line-height:1}
+.brand-art p{color:var(--gold2);letter-spacing:5px;font-size:10px;margin-top:12px}
+.about-copy>p{color:var(--muted);font-size:13px;margin-bottom:16px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}
+.feature{padding-left:13px;border-left:2px solid var(--gold)}
+.feature strong{display:block;font-size:12px}
+.feature span{color:var(--muted);font-size:10px}
+
+/* PORTFOLIO */
+.portfolio{background:#0d0f0d;border-block:1px solid #ffffff0d}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}
+.filter{
+  background:transparent;color:var(--muted);border:1px solid #ffffff20;
+  border-radius:30px;padding:9px 16px;font-size:11px;cursor:pointer;
+  transition:.3s;
+}
+.filter.active,.filter:hover{background:var(--gold);color:#111;border-color:var(--gold)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}
+.project{
+  border:1px solid #ffffff16;border-radius:12px;overflow:hidden;
+  background:#11120f;transition:.3s;
+}
+.project:hover{transform:translateY(-5px);border-color:var(--gold)}
+.project[hidden]{display:none}
+.project-img{height:230px;overflow:hidden;background:#191914}
+.project-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.6s}
+.project:hover img{transform:scale(1.07)}
+.project-info{padding:16px}
+.project-info small{color:var(--gold);font-size:9px;letter-spacing:2px;text-transform:uppercase}
+.project-info h3{font-size:15px;margin-top:5px}
+.project-info p{color:var(--muted);font-size:11px;margin-top:5px}
+.note{color:var(--muted);font-size:11px;margin-top:18px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.skill{
+  padding:23px 10px;text-align:center;border:1px solid #ffffff12;
+  border-radius:12px;background:var(--card);transition:.3s;
+}
+.skill:hover{border-color:var(--gold);transform:translateY(-4px)}
+.skill b{display:block;font-size:19px;color:var(--gold);margin-bottom:6px}
+.skill span{font-size:11px;color:var(--muted)}
+
+/* CONTACT */
+.contact-box{
+  text-align:center;border:1px solid var(--border);border-radius:18px;
+  padding:55px 25px;
+  background:radial-gradient(ellipse at top,#33250e,#10110f 70%);
+}
+.contact-box .description{margin:0 auto 26px}
+.contact-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-email{font-size:12px;color:var(--muted);margin-top:20px}
+.contact-email a{color:var(--gold)}
+footer{padding:26px 0;border-top:1px solid #ffffff12}
+.footer-row{display:flex;align-items:center;justify-content:space-between;gap:18px}
+footer p,footer a{font-size:10px;color:var(--muted)}
+footer a:hover{color:var(--gold)}
+.footer-links{display:flex;gap:18px}
+
+/* SCROLL REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.show{opacity:1;transform:translateY(0)}
+::selection{background:var(--gold);color:#111}
+
+@media(max-width:850px){
+  .navlinks{
+    display:none;position:absolute;top:76px;left:0;width:100%;
+    background:#0b0c0b;padding:25px 5%;border-bottom:1px solid var(--border);
+    flex-direction:column;align-items:flex-start;
+  }
+  .navlinks.open{display:flex}
+  .menu{display:block}
+  .nav>.btn{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero{padding-top:125px}
+  .hero-grid{gap:35px}
+  .hero-visual{min-height:350px}
+  .visual{height:330px}
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{gap:30px}
+}
+@media(max-width:540px){
+  section{padding:65px 0}
+  .hero h1{letter-spacing:-1.7px}
+  .section-top{display:block}
+  .section-top .description{margin-top:12px}
+  .service-grid,.projects{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .float-card{left:0}
+  .footer-row{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <span class="logo-icon">U</span>
+      <span>UMER <span class="gold">GRAPHICS</span>
+      <small>DESIGNS THAT SPEAK</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-outline" href="#contact">Hire Me ↗</a>
+    <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="tag">Independent Creative Designer</div>
+      <h1>Ideas Into<br><em>Visual Magic.</em></h1>
+      <p>Hi, I'm Umer Qureshi. I create modern graphic designs, memorable brand identities and eye-catching e-commerce visuals that help businesses present themselves professionally.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#portfolio">Explore My Work ↗</a>
+        <a class="btn btn-outline" href="#contact">Let's Collaborate</a>
+      </div>
+      <div class="stats">
+        <div><strong>Creative</strong><span>Ideas & Concepts</span></div>
+        <div><strong>Premium</strong><span>Visual Quality</span></div>
+        <div><strong>Custom</strong><span>Design Solutions</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="visual">
+        <div class="visual-content">
+          <small>THINK · DESIGN · CREATE</small>
+          <h2>Design with<br>Purpose.</h2>
+        </div>
+      </div>
+      <div class="orbit">✳</div>
+      <div class="float-card">
+        <span>UMER GRAPHICS</span>
+        <strong>Creativity without limits.</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-top reveal">
+      <div><div class="tag">My Expertise</div><h2 class="heading">Creative Services.</h2></div>
+      <p class="description">Professional visual solutions for businesses, creators, stores and growing brands.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service reveal"><div class="icon">✳</div><h3>Social Media Graphics</h3><p>Social posts, stories, banners, promotional designs and advertising creatives.</p></article>
+      <article class="service reveal"><div class="icon">◈</div><h3>Logo & Brand Identity</h3><p>Distinctive logos, brand colors, typography and consistent visual identity.</p></article>
+      <article class="service reveal"><div class="icon">▧</div><h3>Print Design</h3><p>Professional posters, flyers, business cards, brochures and restaurant menus.</p></article>
+      <article class="service reveal"><div class="icon">◇</div><h3>Shopify Graphics</h3><p>Store banners, product visuals, promotional graphics and e-commerce creatives.</p></article>
+      <article class="service reveal"><div class="icon">◎</div><h3>Ad Creatives</h3><p>Attention-grabbing visuals for TikTok, social media and digital marketing campaigns.</p></article>
+      <article class="service reveal"><div class="icon">✧</div><h3>Custom Design</h3><p>Creative concepts tailored to your brand, business goals and target audience.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="brand-art reveal">
+      <div><div class="monogram">UG</div><p>DESIGNS THAT SPEAK</p></div>
+    </div>
+    <div class="about-copy reveal">
+      <div class="tag">A Little About Me</div>
+      <h2 class="heading">Creativity Meets Strategy.</h2>
+      <p>I'm Umer Qureshi, a graphic designer passionate about transforming ideas into polished, meaningful visuals.</p>
+      <p>My work focuses on clean composition, modern typography, thoughtful color choices and designs that reflect each brand's identity. I also work with e-commerce graphics and digital advertising creatives.</p>
+      <div class="features">
+        <div class="feature"><strong>Creative Thinking</strong><span>Original visual ideas</span></div>
+        <div class="feature"><strong>Brand Consistency</strong><span>Recognizable design</span></div>
+        <div class="feature"><strong>Attention to Detail</strong><span>Polished execution</span></div>
+        <div class="feature"><strong>Client Focus</strong><span>Designs for your goals</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="tag">Selected Creative Work</div>
+    <h2 class="heading">My Portfolio.</h2>
+    <p class="description">A showcase of design styles and creative directions for different industries.</p>
+    <div class="filters">
+      <button class="filter active" data-filter="all">All Work</button>
+      <button class="filter" data-filter="social">Social Media</button>
+      <button class="filter" data-filter="branding">Branding</button>
+      <button class="filter" data-filter="ecommerce">E-commerce</button>
+      <button class="filter" data-filter="print">Print Design</button>
+    </div>
+    <div class="projects">
+      <article class="project reveal" data-category="social">
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=85" alt="Colorful design inspiration"></div>
+        <div class="project-info"><small>Social Media</small><h3>Creative Campaign</h3><p>Bold visual direction for digital promotions.</p></div>
+      </article>
+      <article class="project reveal" data-category="branding">
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1634942536790-253a5e9b6a1d?auto=format&fit=crop&w=800&q=85" alt="Modern branding concept"></div>
+        <div class="project-info"><small>Branding</small><h3>Brand Identity</h3><p>A minimal and memorable visual style.</p></div>
+      </article>
+      <article class="project reveal" data-category="ecommerce">
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=85" alt="Watch product photography"></div>
+        <div class="project-info"><small>E-commerce</small><h3>Product Showcase</h3><p>Product presentation for online stores.</p></div>
+      </article>
+      <article class="project reveal" data-category="social">
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=800&q=85" alt="Abstract colorful artwork"></div>
+        <div class="project-info"><small>Social Media</small><h3>Visual Storytelling</h3><p>Expressive colors and modern composition.</p></div>
+      </article>
+      <article class="project reveal" data-category="print">
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=800&q=85" alt="Printed editorial design"></div>
+        <div class="project-info"><small>Print Design</small><h3>Editorial Concept</h3><p>Layout inspiration for print materials.</p></div>
+      </article>
+      <article class="project reveal" data-category="branding">
+        <div class="project-img"><img loading="lazy" src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=800&q=85" alt="Minimal creative workspace"></div>
+        <div class="project-info"><small>Creative Direction</small><h3>Modern Brand Style</h3><p>A clean, contemporary visual approach.</p></div>
+      </article>
+    </div>
+    <p class="note">Portfolio images are placeholders. Replace them with your own completed projects before presenting this as client work.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="tag">Tools & Expertise</div>
+    <h2 class="heading">My Creative Toolkit.</h2>
+    <p class="description">Creative tools and skills for building professional brand visuals.</p>
+    <div class="skills-grid">
+      <div class="skill"><b>Ps</b><span>Photoshop</span></div>
+      <div class="skill"><b>Ai</b><span>Illustrator</span></div>
+      <div class="skill"><b>Canva</b><span>Graphic Design</span></div>
+      <div class="skill"><b>Brand</b><span>Identity Design</span></div>
+      <div class="skill"><b>Social</b><span>Social Creatives</span></div>
+      <div class="skill"><b>Shopify</b><span>Store Graphics</span></div>
+      <div class="skill"><b>Ads</b><span>Ad Creatives</span></div>
+      <div class="skill"><b>Print</b><span>Print Design</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box reveal">
+      <div class="tag">Let's Work Together</div>
+      <h2 class="heading">Your Vision. <span class="gold">My Design.</span></h2>
+      <p class="description">Have a business, brand or creative project in mind? Tell me what you need, and let's discuss your next design.</p>
+      <div class="contact-buttons">
+        <a class="btn btn-primary" href="mailto:umerq3680@gmail.com?subject=Portfolio%20Project%20Inquiry">✉ Email Me</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/umerqureshi._.6/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      </div>
+      <p class="contact-email">Email: <a href="mailto:umerq3680@gmail.com">umerq3680@gmail.com</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <a class="logo" href="#home"><span class="logo-icon">U</span><span>UMER GRAPHICS<small>DESIGNS THAT SPEAK</small></span></a>
+    <p>© <span id="year"></span> Umer Graphics. All rights reserved.</p>
+    <div class="footer-links"><a href="#home">Home</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div>
+  </div>
+</footer>
+
+<script>
+const menu = document.getElementById("menu");
+const navlinks = document.getElementById("navlinks");
+
+menu.addEventListener("click", () => {
+  navlinks.classList.toggle("open");
+  menu.textContent = navlinks.classList.contains("open") ? "✕" : "☰";
+});
+
+navlinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navlinks.classList.remove("open");
+    menu.textContent = "☰";
+  });
+});
+
+document.querySelectorAll(".filter").forEach(button => {
+  button.addEventListener("click", () => {
+    document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+    button.classList.add("active");
+    const category = button.dataset.filter;
+
+    document.querySelectorAll(".project").forEach(project => {
+      project.hidden = category !== "all" && project.dataset.category !== category;
+    });
+  });
+});
+
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+} else {
+  document.querySelectorAll(".reveal").forEach(el => el.classList.add("show"));
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
